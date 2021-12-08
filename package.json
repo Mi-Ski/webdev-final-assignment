@@ -1,0 +1,28 @@
+{
+  "name": "webdev-final-assignment",
+  "version": "1.0.0",
+  "description": "a final project for my 2021 webdev class",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mi-Ski/webdev-final-assignment.git"
+  },
+  "author": "Michal Skiba",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mi-Ski/webdev-final-assignment/issues"
+  },
+  "homepage": "https://github.com/Mi-Ski/webdev-final-assignment#readme",
+  "devDependencies": {
+    "@antv/l7": "^2.6.11",
+    "mapbox-gl": "^2.6.1",
+    "parcel": "^2.0.1",
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.44.0"
+  },
+  "dependencies": {}
+}
