@@ -1,0 +1,89 @@
+{
+  "editor.mouseWheelZoom": true,
+
+  "workbench.colorCustomizations": {
+    "[Gruvbox - Dark Mode]": {
+      "editor.selectionBackground": "#0400ff"
+    },
+    "[Darcula - Dark Mode]": {
+      "editor.selectionBackground": "#ff00c8b9"
+    },
+    "[Oceanic Next (dimmed bg)]": {
+      "editor.background": "#181818",
+      "editorLineNumber.foreground": "#59ff99"
+    },
+    "[OS X Flat Dark]": {
+      "editor.selectionBackground": "#2e89ff7a"
+    },
+    "[Pop N' Lock Theme by Luxcium ✨ Alexis's Black ⛷]": {
+      "editorCursor.foreground": "#d4b6b6"
+    },
+    "[Pop N' Lock Theme by Luxcium ✨ TSA/ASD 🧩]": {
+      "editorCursor.foreground": "#ffffff",
+      "editorLineNumber.foreground": "#59ff99"
+    },
+    "[Default Dark+]": {
+      "editor.background": "#181818",
+      "statusBar.background": "#000000"
+    },
+    "[Monokai Pro]": {
+      "editorLineNumber.activeForeground": "#ffc400",
+      "editor.background": "#231F22",
+      "editorGutter.background": "#231f22"
+    }
+  },
+
+  "editor.tokenColorCustomizations": {
+    "[NotepadPlusPlus Remixed Theme]": {
+      "comments": "#a7a7a7"
+    },
+    "[Monokai Pro]": {
+      "textMateRules": [
+        {
+            "scope": [
+                "comment.line",
+                "punctuation.definition.comment.end",
+                "punctuation.definition.comment.begin"
+            ],
+            "settings": {
+                "fontStyle": ""
+            }
+        }
+      ]
+    }
+  },
+  "auto-close-tag.enableAutoCloseSelfClosingTag": true,
+  "keyboard.dispatch": "keyCode",
+
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["u"],
+      "after": [],
+      "commands": [
+        {
+          "command": "undo"
+        }
+      ]
+    },
+    {
+      "before": ["<C-r>"],
+      "after": [],
+      "commands": [
+        {
+          "command": "redo"
+        }
+      ]
+    }
+  ],
+  "files.exclude": {
+    ""
+    // ".gitignore": true,
+    // "**/ErrorBoundary": true,
+    // "config": true,
+    // "node_modules": true,
+    // "package-lock.json": true,
+    // "package.json": true,
+    // "public": true,
+    // "scripts": true,
+  }
+}
