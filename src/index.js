@@ -14,7 +14,8 @@ const scene = new L7.Scene({
 	}),
 });
 
-fetch('https://gw.alipayobjects.com/os/rmsportal/oVTMqfzuuRFKiDwhPSFL.json')
+// fetch('https://gw.alipayobjects.com/os/rmsportal/oVTMqfzuuRFKiDwhPSFL.json')
+fetch('../db.json')
 	.then((res) => res.json())
 	.then((data) => {
 		const pointLayer = new L7.PointLayer({})
