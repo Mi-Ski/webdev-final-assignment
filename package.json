@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html --no-minify"
+    "build": "parcel build src/index.html"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,8 @@
   "homepage": "https://github.com/Mi-Ski/webdev-final-assignment#readme",
   "devDependencies": {
     "@antv/l7": "^2.6.11",
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
     "mapbox-gl": "^2.6.1",
     "parcel": "^2.0.1",
     "parcel-bundler": "^1.12.5",
