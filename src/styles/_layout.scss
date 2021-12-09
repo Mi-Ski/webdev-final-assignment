@@ -1,0 +1,29 @@
+.nav {
+	color: white;
+	height: 300px;
+	display: block;
+	background-color: black;
+}
+
+.map-container {
+	min-height: 400px;
+	width: 800px;
+	justify-content: center;
+	position: relative;
+	border: 2px solid rgb(60, 0, 255);
+}
+
+.webgl__container {
+	height: 100vh;
+	background-color:  #000;
+	border-bottom: 5px solid red;
+}
+
+.webgl {
+	position: absolute;
+	top: 0;
+	left: 0;
+	outline: none;
+	width: 100%;
+    mix-blend-mode: exclusion;
+}
