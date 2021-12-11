@@ -1,10 +1,3 @@
-.nav {
-  color: white;
-  height: 300px;
-  display: block;
-  background-color: black;
-}
-
 .map-container {
   min-height: 400px;
   width: 800px;
@@ -14,7 +7,7 @@
 }
 
 .webgl__container {
-  height: 100vh;
+  min-height: 95vh;
   background-color: #000;
   border-bottom: 5px solid red;
 }
@@ -31,11 +24,7 @@
 html,
 body {
   margin: 0;
-}
-
-.header {
-  display: block;
-  height: 200px !important;
-  width: 200px !important;
+  padding: 0;
+  overflow-x: hidden;
 }
 /*# sourceMappingURL=index.4ba3a86f.css.map */
