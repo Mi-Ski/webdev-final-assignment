@@ -5,8 +5,34 @@
 		<title>Projectt</title>
 		<link rel="stylesheet" href="/index.4ba3a86f.css"><script defer="" src="/index.379dd93c.js"></script>
 	</head>
-	<body>
+	<body data-theme="dark">
 		<div class="grid-container">
+
+			<div class="sidebar">
+				<div class="sidebar__container">
+
+					<div class="sidebar__top">
+						<button class="sidebar__hamburger hidden">click</button>
+						<div class="sidebar__logo-box">
+							<img width="40px" height="40px" src="/logo-light.de74f3e9.svg" alt="Logo">
+							<div class="sidebar__title">deets</div>
+						</div>
+						<i class="ri-admin-line"></i>
+					</div>
+
+
+					<div class="sidebar__bottom">
+						<div class="switch">
+							<p class="switch__label">Dark Theme</p>
+							<label class="switch__slider">
+								<input id="darkmodeSwitch" checked="" type="checkbox">
+								<div class="switch__slider-content"></div>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+
 			<div class="webgl__container">
 				<!-- header .content -->
 				<canvas class="webgl"></canvas>
@@ -22,6 +48,7 @@
 
 			<div class="main">lorem ipsum</div>
 		</div>
+
 		<script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
 	</body>
 </html>

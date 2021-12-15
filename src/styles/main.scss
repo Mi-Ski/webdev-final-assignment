@@ -1,8 +1,56 @@
-@use '_layout.scss';
+@use './layout/_layout.scss';
+@use './layout/_sidebar.scss';
+@use './components/darkmode-switch.scss';
 
-html,
-body {
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@100;300;600;900&family=Source+Sans+Pro:wght@200;300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@100;300;600;900&family=Poppins:wght@100;200;300;500;600;700;800&family=Source+Sans+Pro:wght@200;300;400;600&display=swap');
+
+*,
+*::before,
+*::after {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
 	overflow-x: hidden;
+	font-size: 62.5%;
+	font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+	--color-main-bg: #fff;
+	--color-main-accent: #aaa;
+
+	--color-blue: #08a0f7;
+	--color-purple: #6c5ecf;
+	--color-red: #ea6161;
+	--color-green: #22b07d;
+
+	--font-main-color: #000;
+	--font-secondary-color: #808191;
+
+	--darkmode-switch-border: #000;
+}
+
+[data-theme='dark'] {
+	--color-main-bg: #1d1c21;
+	--color-main-accent: #aaa;
+	--color-purple: #6e60d8;
+
+	--font-main-color: #fff;
+
+	--darkmode-switch-border: #08a0f7;
+}
+
+.hidden {
+	display: none;
+	@media only screen and (max-width: 600px) {
+		display: block;
+	}
+}
+
+.svg-element {
+	stop-color: var(--font-main-color);
 }
