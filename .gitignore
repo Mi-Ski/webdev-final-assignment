@@ -3,5 +3,6 @@
 *.sass.map
 *.scss.map
 node_modules
-.cache
-.parcel-cache
+package-lock.json
+.cache/
+.parcel-cache/

@@ -1,6 +1,11 @@
-@use './layout/_layout.scss';
-@use './layout/_sidebar.scss';
-@use './components/darkmode-switch.scss';
+@use './layout/layout';
+@use './layout/sidebar';
+@use './layout/header-container';
+@use './layout/cards-container';
+
+@use './components/darkmode-switch';
+@use './components/button__show-sidebar';
+@use './components/card';
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@100;300;600;900&family=Source+Sans+Pro:wght@200;300;400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@100;300;600;900&family=Poppins:wght@100;200;300;500;600;700;800&family=Source+Sans+Pro:wght@200;300;400;600&display=swap');
@@ -11,17 +16,26 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-size: inherit;
+
+	transition: background-color .2s, color .1s;
 }
 
 html {
 	overflow-x: hidden;
 	font-size: 62.5%;
 	font-family: 'Montserrat', sans-serif;
+
+	@media only screen and (max-width: 600px) {
+			font-size: 50%;	
+	}
 }
 
 :root {
 	--color-main-bg: #fff;
-	--color-main-accent: #aaa;
+	--color-secondary: #3777ff;
+	--color-secondary-light: #cfdaf1;
+	--color-dark: #3b3b3b;
 
 	--color-blue: #08a0f7;
 	--color-purple: #6c5ecf;
@@ -30,27 +44,31 @@ html {
 
 	--font-main-color: #000;
 	--font-secondary-color: #808191;
+	--font-darkblue-orange: #ee6c4d;
 
-	--darkmode-switch-border: #000;
+	--darkmode-switch-border: #293241;
+	--darkmode-switch-thumb: #f45b69;
 }
 
 [data-theme='dark'] {
 	--color-main-bg: #1d1c21;
-	--color-main-accent: #aaa;
+	--color-secondary: #f45b69;
+	--color-dark: #1d1c21;
+
 	--color-purple: #6e60d8;
-
 	--font-main-color: #fff;
+	--font-darkblue-orange: #e0fbfc;
 
-	--darkmode-switch-border: #08a0f7;
+	--darkmode-switch-border: #f45b69;
+
 }
 
-.hidden {
-	display: none;
-	@media only screen and (max-width: 600px) {
-		display: block;
-	}
-}
 
 .svg-element {
 	stop-color: var(--font-main-color);
 }
+
+.hidden {
+	display: none;
+}
+

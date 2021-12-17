@@ -1,0 +1,17 @@
+.card {
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		max-width: 150rem;
+				flex-wrap: wrap;
+
+		@media only screen and (max-width: 600px) {
+		}
+	}
+	margin: 0 2rem;
+	background-color: #605c6d;
+	padding: 15rem 7rem;
+	border-radius: 0.6rem;
+	font-size: 1.4rem;
+}

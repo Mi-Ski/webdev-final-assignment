@@ -21,7 +21,9 @@
     "@babel/cli": "^7.16.0",
     "@babel/core": "^7.16.0",
     "@parcel/transformer-sass": "^2.0.1",
+    "@types/dat.gui": "^0.7.7",
     "babel-preset-env": "^1.7.0",
+    "dat.gui": "^0.7.7",
     "mapbox-gl": "^2.6.1",
     "parcel": "^2.0.1",
     "sass": "^1.44.0"

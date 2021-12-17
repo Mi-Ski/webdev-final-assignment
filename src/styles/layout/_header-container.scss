@@ -1,0 +1,16 @@
+.header-container {
+		color: white;
+		position: absolute;
+
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		width: 100%;
+
+		&__heading {
+			text-align: center;
+			font-size: 4.5rem;
+			font-family: 'Poppins', sans-serif;
+			letter-spacing: .2rem;
+		}
+}

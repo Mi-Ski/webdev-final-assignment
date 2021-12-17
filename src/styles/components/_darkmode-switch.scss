@@ -4,7 +4,6 @@
 	align-items: center;
 	line-height: 1rem;
 
-
 	&__label {
 		font-size: 1.6rem;
 		color: var(--font-main-color);
@@ -13,15 +12,17 @@
 	&__slider {
 		transform: translateX(-2rem);
 		position: relative;
+		transition: all 0.3s;
 
 		&-content {
-		cursor: pointer;
+			cursor: pointer;
 			background-color: white;
 			width: 5rem;
 			border: 2px solid var(--darkmode-switch-border);
 			border-radius: 2rem;
 			height: 2.4rem;
 			position: absolute;
+			transition: all 0.3s ease-in-out;
 
 			&::before {
 				width: 1.8rem;
@@ -29,7 +30,7 @@
 				display: block;
 				position: absolute;
 				content: '';
-				background-color: var(--color-blue);
+				background-color: var(--darkmode-switch-thumb);
 				border-radius: 100%;
 				transform: translateY(1px) translateX(1px);
 				transition: all 0.3s ease-in-out;
@@ -40,7 +41,7 @@
 			appearance: none;
 
 			&:checked + .switch__slider-content {
-				background-color: var(--color-blue);
+				background-color: var(--color-secondary);
 
 				&::before {
 					background-color: white;

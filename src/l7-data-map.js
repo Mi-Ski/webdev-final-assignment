@@ -17,6 +17,7 @@ export default fetch('https://gw.alipayobjects.com/os/rmsportal/oVTMqfzuuRFKiDwh
 	// fetch('./db.json')
 	.then((res) => res.json())
 	.then((data) => {
+
 		const pointLayer = new L7.PointLayer({})
 			.source(data.list, {
 				parser: {
@@ -44,7 +45,25 @@ export default fetch('https://gw.alipayobjects.com/os/rmsportal/oVTMqfzuuRFKiDwh
 			.style({
 				opacity: 1.0,
 			});
+
 		mapScene.addLayer(pointLayer);
 	});
+
+	// prevent scrollwheel zoom without ctrl or alt pressed 
+	mapScene.map.on("wheel", event => {
+    if (event.originalEvent.ctrlKey) {
+        return;
+    }
+
+    if (event.originalEvent.metaKey) {
+        return;
+    }
+
+    if (event.originalEvent.altKey) {
+        return;
+    }
+
+    event.preventDefault();
+});
 
 mapScene.map.on('click', (e) => console.log(e));
