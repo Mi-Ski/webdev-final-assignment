@@ -10,8 +10,11 @@
 	@media only screen and (max-width: 600px) {
 		grid-template-columns: 0 1fr;
 	}
-	@media only screen and (min-width: 100rem) {
+	@media only screen and (min-width: 1000px) {
 		grid-template-columns: 30rem 1fr;
+	}
+	@media only screen and (min-width: 1600px) {
+		grid-template-columns: 36rem 1fr;
 	}
 }
 
@@ -46,6 +49,7 @@
 }
 
 .map-container {
+	background-color: #242424;
 	grid-column: 2 / 3;
 	grid-row: 3 / 4;
 	min-height: 400px;

@@ -1,15 +1,19 @@
+// imports
 @use './layout/layout';
 @use './layout/sidebar';
 @use './layout/header-container';
 @use './layout/cards-container';
+@use './layout/map';
 
 @use './components/darkmode-switch';
 @use './components/button__show-sidebar';
 @use './components/card';
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@100;300;600;900&family=Source+Sans+Pro:wght@200;300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@100;300;500;600;900&family=Source+Sans+Pro:wght@200;300;400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@100;300;600;900&family=Poppins:wght@100;200;300;500;600;700;800&family=Source+Sans+Pro:wght@200;300;400;600&display=swap');
 
+
+// reset
 *,
 *::before,
 *::after {
@@ -31,39 +35,48 @@ html {
 	}
 }
 
+// color themes5
 :root {
 	--color-main-bg: #fff;
 	--color-secondary: #3777ff;
+	--color-secondary-opacity: #3776ff52;
 	--color-secondary-light: #cfdaf1;
 	--color-dark: #3b3b3b;
+	--color-shadow: #ddd;
 
 	--color-blue: #08a0f7;
 	--color-purple: #6c5ecf;
 	--color-red: #ea6161;
 	--color-green: #22b07d;
 
-	--font-main-color: #000;
+	--font-main-color: #212121;
 	--font-secondary-color: #808191;
 	--font-darkblue-orange: #ee6c4d;
+	--font-weight-thin: 500;
 
 	--darkmode-switch-border: #293241;
 	--darkmode-switch-thumb: #f45b69;
+	--darkmode-switch-fontweight: 500; 
 }
 
 [data-theme='dark'] {
 	--color-main-bg: #1d1c21;
 	--color-secondary: #f45b69;
+	--color-secondary-opacity: #f45b6838;
 	--color-dark: #1d1c21;
-
 	--color-purple: #6e60d8;
+	--color-shadow: #0c0c0c;
+
 	--font-main-color: #fff;
 	--font-darkblue-orange: #e0fbfc;
+	--font-weight-thin: 300;
 
 	--darkmode-switch-border: #f45b69;
-
+	--darkmode-switch-fontweight: 300; 
 }
 
 
+// utility classes
 .svg-element {
 	stop-color: var(--font-main-color);
 }
@@ -72,3 +85,7 @@ html {
 	display: none;
 }
 
+.invert {
+	filter: invert(70%);
+	opacity: 1 !important;
+}

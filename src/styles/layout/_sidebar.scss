@@ -17,10 +17,12 @@
 		transform: translateX(-23rem);
 	}
 
-	@media only screen and (min-width: 1600px) {
-			width: 30rem;	
+	@media only screen and (min-width: 1000px) {
+		width: 30rem;
 	}
-
+	@media only screen and (min-width: 1600px) {
+		width: 36rem;
+	}
 
 	// @media only screen and (max-width: 900px) {
 	// 	grid-column: 1 / -1;
@@ -67,18 +69,35 @@
 	}
 
 	&__logo-box {
+		position: relative;
+		left: -1rem;
+
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		margin-top: 2rem;
 		padding: 5rem 0;
+
+		& img {
+			width: 7.5rem;
+			height: 7.5rem;
+
+			@media only screen and (max-width: 100rem) {
+				width: 6rem;
+				height: 6rem;
+			}
+		}
 	}
 
 	&__title {
 		font-family: 'Poppins';
 		color: var(--font-main-color);
-		font-size: 2.8rem;
+		font-size: 4rem;
 		margin-left: 0.4rem;
+
+		@media only screen and (max-width: 100rem) {
+			font-size: 3rem;
+		}
 	}
 
 	&__title-span {
@@ -88,11 +107,11 @@
 	}
 
 	&__list--top > * {
-		margin-bottom: 1.5rem;
+		padding: 1rem 1.5rem;
 	}
 
 	&__list--bottom > * {
-		margin-bottom: 1.5rem;
+		padding: 1rem 1.5rem;
 	}
 
 	&__list-item {
@@ -100,6 +119,22 @@
 		align-items: center;
 		color: var(--font-main-color);
 		gap: 2rem;
+		transition: box-shadow 0.2s, transform 0.03s;
+
+		& p {
+			opacity: 0.8;
+			font-size: 1.2rem;
+		}
+
+		&:hover {
+			box-shadow: 0rem 0rem 1.3rem var(--color-shadow);
+			transform: scale(1.08);
+			cursor: pointer;
+
+			@media only screen and (max-width: 100rem) {
+				box-shadow: -1rem 0rem 1rem var(--color-shadow);
+			}
+		}
 
 		& i {
 			font-size: 2rem;

@@ -6,7 +6,9 @@ const mapScene = new L7.Scene({
 		style: 'mapbox://styles/michalskiba/ckwpk7z3d5ia815pbwnki3hrj',
 		center: [120.19382669582967, 30.258134],
 		pitch: 40,
-		zoom: 8,
+		// zoom: 5,
+		maxZoom: 8,
+		minZoom: 3,
 		token:
 			'pk.eyJ1IjoibWljaGFsc2tpYmEiLCJhIjoiY2t3cGs1OGVqMGRvMTJ3cW9hMTBzYjZtdSJ9.P0xUwkWHMjZCzpWbmjn0nw',
 	}),

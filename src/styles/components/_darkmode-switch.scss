@@ -5,7 +5,10 @@
 	line-height: 1rem;
 
 	&__label {
-		font-size: 1.6rem;
+		font-size: 1.2rem;
+		font-family: 'Poppins', sans-serif;
+		font-weight: var(--darkmode-switch-border);
+		text-transform: uppercase;
 		color: var(--font-main-color);
 	}
 

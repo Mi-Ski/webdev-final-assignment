@@ -1,20 +1,28 @@
 import './styles/main.scss';
 import 'remixicon/fonts/remixicon.css';
 import headerInit from './threejs-header.js';
-// main data map init
 import './l7-data-map.js';
 
-const sidebarSVGlogo = document.querySelector('.sidebar__svg'); 
 const logoDark = require('./images/logo-dark.svg');
 const logoLight = require('./images/logo-light.svg');
+const dmSwitch = document.querySelector('#darkmodeSwitch');
+const sidebarSVGlogo = document.querySelector('.sidebar__svg'); 
+
+window.onload = () => {
+	dmSwitch.checked = true;
+} 
 
 document.querySelector('.button__show-sidebar').addEventListener('click', () => {
 	document.querySelector('.sidebar').classList.toggle('sidebar--visible');
-	console.log(22);
 })
 
 // darkmode button handler
-document.querySelector('#darkmodeSwitch').addEventListener('change', (e) => {
+dmSwitch.addEventListener('change', (e) => {
+
+	document.querySelectorAll('.landing-logo').forEach(el => {
+		el.classList.toggle('invert');
+	})
+
 	if (e.target.checked) {
 		document.body.setAttribute('data-theme', 'dark');
 		sidebarSVGlogo.src = logoLight;
@@ -22,6 +30,7 @@ document.querySelector('#darkmodeSwitch').addEventListener('change', (e) => {
 		document.body.removeAttribute('data-theme');
 		sidebarSVGlogo.src = logoDark;
 	}
+
 	headerInit();
 });
 
