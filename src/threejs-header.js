@@ -1,26 +1,17 @@
 import * as THREE from 'three';
-
 const loader = new THREE.TextureLoader();
 const particleTexture = loader.load('./particle.png');
 
-// Debug
-
-// Canvas
 const canvas = document.querySelector('canvas.webgl');
-
-// Scene
-const scene = new THREE.Scene();
-
-// Objects
-const geometry = new THREE.TorusGeometry(0.7, 0.2, 16, 100);
-
-const particlesGeometry = new THREE.BufferGeometry();
 const particlesCount = 5000;
 
-const positionArray = new Float32Array(particlesCount * 3);
+const scene = new THREE.Scene();
+const geometry = new THREE.TorusGeometry(0.7, 0.2, 16, 100);
+const particlesGeometry = new THREE.BufferGeometry();
 
+const positionArray = new Float32Array(particlesCount * 3);
 for (let i = 0; i <= particlesCount; i++) {
-	positionArray[i] = (Math.random() - .5) * (Math.random() * 3);
+	positionArray[i] = (Math.random() - 0.5) * (Math.random() * 3);
 }
 
 particlesGeometry.setAttribute(
@@ -31,15 +22,14 @@ particlesGeometry.setAttribute(
 // Materials
 const material = new THREE.PointsMaterial({
 	size: 0.004,
-	color: 0x888888
-
+	color: 0x888888,
 });
 
 const particleMaterial = new THREE.PointsMaterial({
 	size: 0.012,
 	map: particleTexture,
 	transparent: true,
-	color: 0x999999
+	color: 0x999999,
 });
 
 // Mesh
@@ -48,18 +38,14 @@ const particleMesh = new THREE.Points(particlesGeometry, particleMaterial);
 scene.add(sphere, particleMesh);
 
 // Lights
-
 const pointLight = new THREE.PointLight(0xffffff, 0.1);
 pointLight.position.x = 2;
 pointLight.position.y = 3;
 pointLight.position.z = 4;
 scene.add(pointLight);
 
-/**
- * Sizes
- */
 const sizes = {
-	width: window.innerWidth,
+	width: window.innerWidth / 0.9,
 	height: window.innerHeight,
 };
 
@@ -114,11 +100,17 @@ mouseX = mouseY = 1000;
 const animateParticles = (e) => {
 	mouseY = e.clientY;
 	mouseX = e.clientX;
-}
+};
 
-document.querySelector('.webgl__container').addEventListener('mousemove', animateParticles);
+document
+	.querySelector('.webgl__container')
+	.addEventListener('mousemove', animateParticles);
 
-
+window.addEventListener('scroll', () => {
+	sphere.scale.x = 1 + window.scrollY * .004;
+	sphere.scale.y = 1 + window.scrollY * .004;
+	sphere.scale.z = 1 + window.scrollY * .004;
+});
 
 const clock = new THREE.Clock();
 
@@ -129,9 +121,6 @@ export default tick = () => {
 	sphere.rotation.y = 0.1 * elapsedTime;
 	particleMesh.rotation.x = -mouseY * (1 * 0.00008);
 	particleMesh.rotation.y = -mouseX * (1 * 0.00008);
-
-	// Update Orbital Controls
-	// controls.update()
 
 	// Render
 	renderer.render(scene, camera);

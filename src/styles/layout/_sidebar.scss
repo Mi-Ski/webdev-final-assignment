@@ -12,6 +12,7 @@
 	background-color: var(--color-main-bg);
 	box-shadow: 0rem 0rem 2rem rgba(0, 0, 0, 0.2);
 	z-index: 10;
+	transition: transform .3s;
 
 	@media only screen and (max-width: 600px) {
 		transform: translateX(-23rem);
@@ -119,7 +120,7 @@
 		align-items: center;
 		color: var(--font-main-color);
 		gap: 2rem;
-		transition: box-shadow 0.2s, transform 0.03s;
+		transition: box-shadow 0.03s, transform 0.03s;
 
 		& p {
 			opacity: 0.8;
@@ -128,11 +129,13 @@
 
 		&:hover {
 			box-shadow: 0rem 0rem 1.3rem var(--color-shadow);
+			border-radius: .4rem;
 			transform: scale(1.08);
 			cursor: pointer;
 
-			@media only screen and (max-width: 100rem) {
-				box-shadow: -1rem 0rem 1rem var(--color-shadow);
+			@media only screen and (max-width: 1000px) {
+			transform: scale(1.02);
+				box-shadow: -.5rem 0rem 1rem var(--color-shadow);
 			}
 		}
 

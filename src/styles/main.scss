@@ -2,16 +2,15 @@
 @use './layout/layout';
 @use './layout/sidebar';
 @use './layout/header-container';
-@use './layout/cards-container';
-@use './layout/map';
+@use './layout/details-container';
+@use './layout/map-container';
+@use './layout/main-container';
 
 @use './components/darkmode-switch';
 @use './components/button__show-sidebar';
-@use './components/card';
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@100;300;500;600;900&family=Source+Sans+Pro:wght@200;300;400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@100;300;600;900&family=Poppins:wght@100;200;300;500;600;700;800&family=Source+Sans+Pro:wght@200;300;400;600&display=swap');
-
 
 // reset
 *,
@@ -22,7 +21,7 @@
 	box-sizing: border-box;
 	font-size: inherit;
 
-	transition: background-color .2s, color .1s;
+	transition: background-color 0.2s, color 0.1s;
 }
 
 html {
@@ -31,11 +30,15 @@ html {
 	font-family: 'Montserrat', sans-serif;
 
 	@media only screen and (max-width: 600px) {
-			font-size: 50%;	
+		font-size: 50%;
 	}
 }
 
-// color themes5
+body {
+	background-color: var(--color-main-bg);
+}
+
+// color theme
 :root {
 	--color-main-bg: #fff;
 	--color-secondary: #3777ff;
@@ -44,19 +47,23 @@ html {
 	--color-dark: #3b3b3b;
 	--color-shadow: #ddd;
 
+	--color-section-bg: #eee;
+	--color-section-element: #f1f1f1;
+	--color-section-shadow: rgb(175, 175, 175);
+
 	--color-blue: #08a0f7;
 	--color-purple: #6c5ecf;
 	--color-red: #ea6161;
-	--color-green: #22b07d;
 
 	--font-main-color: #212121;
 	--font-secondary-color: #808191;
 	--font-darkblue-orange: #ee6c4d;
+	--font-darkblue-orange-opacity: #ee6d4d3f;
 	--font-weight-thin: 500;
 
 	--darkmode-switch-border: #293241;
 	--darkmode-switch-thumb: #f45b69;
-	--darkmode-switch-fontweight: 500; 
+	--darkmode-switch-fontweight: 500;
 }
 
 [data-theme='dark'] {
@@ -67,14 +74,18 @@ html {
 	--color-purple: #6e60d8;
 	--color-shadow: #0c0c0c;
 
+	--color-section-bg: #3e3c47;
+	--color-section-element: #605c6d;
+	--color-section-shadow: rgb(36, 36, 36);
+
 	--font-main-color: #fff;
 	--font-darkblue-orange: #e0fbfc;
+	--font-darkblue-orange-opacity: #e0fbfc3a;
 	--font-weight-thin: 300;
 
 	--darkmode-switch-border: #f45b69;
-	--darkmode-switch-fontweight: 300; 
+	--darkmode-switch-fontweight: 300;
 }
-
 
 // utility classes
 .svg-element {
@@ -88,4 +99,27 @@ html {
 .invert {
 	filter: invert(70%);
 	opacity: 1 !important;
+}
+
+.underline {
+	display: inline-block;
+	border-bottom: 0.3rem solid;
+	border-block-end-style: ridge;
+
+	&--main {
+		border-color: var(--color-secondary);
+
+		&:hover {
+			background-color: var(--color-secondary-opacity);
+			border-radius: 0.5rem;
+		}
+	}
+	&--secondary {
+		border-color: var(--font-darkblue-orange);
+
+		&:hover {
+			background-color: var(--font-darkblue-orange-opacity);
+			border-radius: 0.5rem;
+		}
+	}
 }

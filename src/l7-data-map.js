@@ -30,7 +30,7 @@ export default fetch('https://gw.alipayobjects.com/os/rmsportal/oVTMqfzuuRFKiDwh
 			})
 			.shape('cylinder')
 			.size('t', function (level) {
-				return [3, 2, level * 2 + 20];
+				return [3, 2, level * 2 + 12];
 			})
 			.color('t', [
 				'#094D4A',

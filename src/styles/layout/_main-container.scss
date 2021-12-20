@@ -1,0 +1,72 @@
+.main {
+	background-color: var(--color-section-bg);
+	color: var(--font-main-color);
+	position: relative;
+
+	&__content {
+		width: 50%;
+		margin: 0 auto;
+	}
+
+	&__background {
+		&--top {
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: block;
+			opacity: 0.4;
+			height: 7rem;
+			width: 100%;
+			background-position: top;
+			background-size: 7%;
+			background-repeat: repeat-x;
+			background-image: url('../../dist/geometric-pattern.png');
+
+			mask-image: -webkit-gradient(
+				linear,
+				left top,
+				left bottom,
+				from(black),
+				to(transparent)
+			);
+
+			-webkit-mask-image: -webkit-gradient(
+				linear,
+				left top,
+				left bottom,
+				from(black),
+				to(transparent)
+			);
+		}
+
+		&--bottom {
+			position: absolute;
+			top: calc(100% - 7rem);
+			left: 0;
+			display: block;
+			opacity: .4;
+			height: 7rem;
+			width: 100%;
+			background-position: top;
+			background-size: 7%;
+			background-repeat: repeat-x;
+			background-image: url('../../dist/geometric-pattern.png');
+
+			mask-image: -webkit-gradient(
+				linear,
+				left top,
+				left bottom,
+				from(transparent),
+				to(black)
+			);
+
+			-webkit-mask-image: -webkit-gradient(
+				linear,
+				left top,
+				left bottom,
+				from(transparent),
+				to(black)
+			);
+		}
+	}
+}
