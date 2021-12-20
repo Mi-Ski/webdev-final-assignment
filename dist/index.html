@@ -9,7 +9,10 @@
 	</head>
 	<body data-theme="dark">
 		<div class="grid-container">
-			<button class="button__show-sidebar">click</button>
+			<!-- sidebar -->
+			<button class="button__show-sidebar">
+				<i class="ri-menu-line"></i>
+			</button>
 			<div class="sidebar">
 				<div class="sidebar__container">
 					<div class="sidebar__top">
@@ -67,6 +70,7 @@
 						</div>
 					</div>
 
+					<!-- darkmode switch -->
 					<div class="sidebar__bottom">
 						<div class="switch">
 							<p class="switch__label">Dark Theme</p>
@@ -80,8 +84,8 @@
 			</div>
 
 			<div class="webgl__container">
+				<!-- three js background -->
 				<canvas class="webgl"></canvas>
-
 				<!-- header overlay -->
 				<div class="header-container">
 					<div class="header-container__description">
@@ -112,61 +116,97 @@
 						</div>
 					</div>
 				</div>
-				<!-- three js bg -->
 			</div>
 
-			<div class="description">
-				<!-- card1, card2, card3 -->
-				<h2 class="description__heading">
-					We use data to generate valuable insights for growing and scaling your
+			<!-- section 2 -->
+			<div class="details-container">
+				<h2 class="details-container__heading">
+					We use <span class="underline underline--main">data</span> to generate
+					valuable insights for
+					<span class="underline underline--secondary">growing</span> and
+					<span class="underline underline--secondary">scaling</span> your
 					business.
 				</h2>
-				<div class="card__container">
-					<div class="card card--1">Lorem ipsum dolor sit.</div>
-					<div class="card card--2">Lorem ipsum dolor sit.</div>
-					<div class="card card--3">Lorem ipsum dolor sit.</div>
+
+				<div class="details-container__cards">
+					<div class="card-container">
+						<div class="card card--front">lorem</div>
+						<div class="card card--back">
+							<div class="card--back__button">
+								Learn more
+								<i class="ri-arrow-right-s-fill"></i>
+							</div>
+						</div>
+					</div>
+					<div class="card-container">
+						<div class="card card--front">lorem</div>
+						<div class="card card--back">
+							<div class="card--back__button">
+								Learn more
+								<i class="ri-arrow-right-s-fill"></i>
+							</div>
+						</div>
+					</div>
+					<div class="card-container">
+						<div class="card card--front">lorem</div>
+						<div class="card card--back">
+							<div class="card--back__button">
+								Learn more
+								<i class="ri-arrow-right-s-fill"></i>
+							</div>
+						</div>
+					</div>
+
+					<!-- <div class="card-container card--1">
+						<div class="card card--front">lorem</div>
+						<div class="card card--back">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum consectetur modi at.</div>
+					</div>
+					<div class="card-container card--1">
+						<div class="card card--front">lorem</div>
+						<div class="card card--back">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum consectetur modi at.</div>
+					</div> -->
 				</div>
 			</div>
 
+			<!-- l7 map -->
 			<main class="map-container">
 				<div id="map"></div>
-				<h4 class="map-container__title">Our latest project</h4>
 				<div class="map-container__sidebar">
 					<h5>Lorem ipsum dolor sit.</h5>
 					<ul>
-						<li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum, aut? In laudantium distinctio corporis!</li>
-						<li>loLorem ipsum dolor sit amet consectetur, adipisicing elit. Earum, aut? In laudantium distinctio corporis!remx14</li>
-						<li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum, aut? In laudantium distinctio corporis!</li>
-						<li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum, aut? In laudantium distinctio corporis!</li>
-						<li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum, aut? In laudantium distinctio corporis!</li>
+						<li>
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum,
+							aut? In laudantium distinctio corporis!
+						</li>
+						<li>
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum,
+							aut?
+						</li>
+						<li>
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum,
+							aut? In laudantium corporis!
+						</li>
+						<li>
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum,
+							aut? In laudantium distinctio corporis!
+						</li>
+						<li>
+							Lorem ipsum dolor sit amet consectetur, aut? distinctio corporis!
+						</li>
 					</ul>
 				</div>
+				<h4 class="map-container__title">Our latest project</h4>
 			</main>
 
 			<div class="main">
-				praesentium omnis reiciendis voluptatem necessitatibus nesciunt dolores
-				natus tenetur architecto. Alias quaerat nostrum aliquid sed esse
-				officiis tenetur facilis ducimus at aut officia quos praesentium, minima
-				dolores sequi incidunt ratione atque tempore vero necessitatibus. Cum
-				aliquam doloremque modi ab eveniet mollitia dolorum accusamus nulla
-				deserunt quae dolores ea atque beatae voluptatum magnam voluptatibus
-				dolorem esse impedit asperiores cumque, deleniti porro dolor id laborum?
-				Quae inventore nostrum necessitatibus asperiores voluptatem adipisci
-				excepturi distinctio minima maxime, totam fugiat aliquam numquam ex
-				mollitia odit eaque qui vitae dolor, sit nam itaque iure repellendus
-				quia! Rem, deleniti, a nulla vitae incidunt corrupti est dicta
-				consectetur, cum accusantium voluptates perspiciatis aperiam nemo.
-				Tempore quisquam accusantium expedita, modi in quibusdam sed dicta
-				obcaecati laborum hic iusto odit qui illo, nostrum nihil explicabo
-				fugiat molestias. Voluptatibus maiores, nemo beatae ratione omnis iusto
-				enim itaque distinctio eius.
+				<div class="main__background--top"></div>
+				<div class="main__content">
+					<p style="font-size: 8rem; text-align: center">&lt;main&gt;</p>
+				</div>
+				<div class="main__background--bottom"></div>
 			</div>
 			<div class="footer">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, eum modi
-				recusandae ipsam culpa aspernatur adipisci. Perspiciatis soluta quidem
-				animi dicta, laborum aut sed velit optio fugiat doloremque ut voluptate
-				magni ea provident, quo ab quaerat nostrum impedit est iure tempore
-				inventore? Deleniti et ducimus sit aliquid praesentium cum porro?
+				<p style="font-size: 8rem; text-align: center">&lt;footer&gt;</p>
 			</div>
 		</div>
 
