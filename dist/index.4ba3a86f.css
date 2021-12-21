@@ -362,28 +362,74 @@
   justify-content: center;
   align-items: center;
   backface-visibility: hidden;
-  padding: 15rem 2rem;
   height: 100%;
   width: 100%;
   transition: all 0.8s ease;
-  border-radius: 1.5rem;
+  border-radius: 1rem;
   box-shadow: 0rem 0.5rem 2rem var(--color-section-shadow);
 }
 .card-container .card--front {
   position: absolute;
   background-color: var(--color-section-element);
 }
+.card-container .card--front__icon {
+  position: absolute;
+  top: 2rem;
+  right: 2.5rem;
+  font-size: 12rem;
+  text-shadow: 1px 1px 2px var(--font-main-color);
+  color: var(--font-darkblue-orange);
+  opacity: 0.15;
+}
+.card-container .card--front__arrow {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 2rem;
+  color: var(--font-darkblue-orange);
+  font-size: 4rem;
+}
+.card-container .card--front__text {
+  position: absolute;
+  top: 10rem;
+  width: 80%;
+  text-align: center;
+}
+.card-container .card--front__text > * {
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+}
+.card-container .card--front__text .card-text__heading {
+  color: var(--font-main-color);
+  font-size: 2.4rem;
+  margin-bottom: 3rem;
+  text-shadow: 1px 1px 10px var(--color-shadow);
+  width: 90%;
+  min-height: 70px;
+}
+.card-container .card--front__text .card-text__paragraph {
+  color: var(--font-darkblue-orange);
+  font-size: 1.4rem;
+  font-weight: 300;
+  width: 80%;
+}
 .card-container .card--back {
   position: absolute;
   transform: rotateY(180deg);
   background-color: var(--color-main-bg);
-  color: white;
 }
 .card-container:hover .card--front {
   transform: rotateY(180deg);
 }
 .card-container:hover .card--back {
   transform: rotateY(0);
+}
+@keyframes slide {
+  0% {
+    transform: translateX(0) skew(-25deg);
+  }
+  100% {
+    transform: translateX(700px) skew(-25deg);
+  }
 }
 .map-container {
   position: relative;
@@ -576,6 +622,69 @@
   transform: translateX(0rem);
   width: 80%;
 }
+.button--animated {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 8rem;
+  color: var(--font-main-color);
+  border: 0.4rem solid var(--color-secondary);
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.2s, transform 0.2s, box-shadow 0.1s;
+  cursor: pointer;
+}
+.button--animated::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -19rem;
+  z-index: -1;
+  display: block;
+  width: 15rem;
+  height: 100%;
+  background-image: linear-gradient(to right, var(--color-secondary-opacity), transparent);
+  transform: skew(-25deg);
+  opacity: 0.7;
+}
+.button--animated:hover {
+  box-shadow: 0rem 0.7rem 1.7rem var(--color-secondary-opacity);
+  transform: translateY(-3px);
+}
+.button--animated:hover::after {
+  animation: slide 2s cubic-bezier(0.68, 0.1, 0.15, 0.9) infinite;
+}
+.button--animated:active {
+  transform: translateY(2px);
+  box-shadow: 0rem 0.5rem 1.3rem var(--color-secondary-opacity);
+}
+.button--animated__text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  font-weight: 500;
+  font-size: 2rem;
+}
+.button--animated__text p {
+  color: var(--font-main-color);
+}
+.button--animated__text p::selection {
+  background: none;
+  color: none;
+}
+.button--animated__text i {
+  font-size: 2.6rem;
+  margin-right: -1rem;
+  color: var(--color-secondary);
+  font-weight: 900;
+}
+.button--animated__text i::selection {
+  background: none;
+  color: none;
+}
 *,
 *::before,
 *::after {
@@ -605,6 +714,7 @@ body {
   --color-secondary-light: #cfdaf1;
   --color-dark: #3b3b3b;
   --color-shadow: #ddd;
+  --color-shadow-light: #3131312c;
   --color-section-bg: #eee;
   --color-section-element: #f1f1f1;
   --color-section-shadow: rgb(175, 175, 175);
@@ -627,6 +737,7 @@ body {
   --color-dark: #1d1c21;
   --color-purple: #6e60d8;
   --color-shadow: #0c0c0c;
+  --color-shadow-light: rgba(255, 255, 255, 0.157);
   --color-section-bg: #3e3c47;
   --color-section-element: #605c6d;
   --color-section-shadow: rgb(36, 36, 36);

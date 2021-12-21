@@ -39,7 +39,6 @@
 	min-height: 40rem;
 	width: 35rem;
 
-
 	& .card {
 		position: absolute;
 		display: flex;
@@ -47,23 +46,70 @@
 		align-items: center;
 
 		backface-visibility: hidden;
-		padding: 15rem 2rem;
 		height: 100%;
 		width: 100%;
 
 		transition: all 0.8s ease;
-		border-radius: 1.5rem;
-		box-shadow: 0rem .5rem 2rem var(--color-section-shadow);
+		border-radius: 1rem;
+		box-shadow: 0rem 0.5rem 2rem var(--color-section-shadow);
 
 		&--front {
 			position: absolute;
-		background-color: var(--color-section-element);
+			background-color: var(--color-section-element);
+
+			&__icon {
+				position: absolute;
+				top: 2rem;
+				right: 2.5rem;
+
+				font-size: 12rem;
+				text-shadow: 1px 1px 2px var(--font-main-color);
+				color: var(--font-darkblue-orange);
+				opacity: 0.15;
+			}
+
+			&__arrow {
+				position: absolute;
+				bottom: 1.5rem;
+				right: 2rem;
+				color: var(--font-darkblue-orange);
+				font-size: 4rem;
+			}
+
+			&__text {
+				position: absolute;
+				top: 10rem;
+				width: 80%;
+				text-align: center;
+
+
+
+				& > * {
+					margin: 0 auto;
+					font-family: 'Poppins', sans-serif;
+				}
+
+				& .card-text__heading {
+					color: var(--font-main-color);
+					font-size: 2.4rem;
+					margin-bottom: 3rem;
+					text-shadow: 1px 1px 10px var(--color-shadow);
+					width: 90%;
+					min-height: 70px;
+				}
+
+				& .card-text__paragraph {
+					color: var(--font-darkblue-orange);
+					font-size: 1.4rem;
+					font-weight: 300;
+					width: 80%;
+				}
+			}
 		}
 		&--back {
 			position: absolute;
 			transform: rotateY(180deg);
-		background-color: var(--color-main-bg);
-		color: white;
+			background-color: var(--color-main-bg);
 		}
 	}
 
@@ -75,4 +121,13 @@
 			transform: rotateY(0);
 		}
 	}
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0) skew(-25deg);
+  }
+  100% {
+    transform: translateX(700px) skew(-25deg);
+  }
 }

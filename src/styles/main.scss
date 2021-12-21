@@ -8,6 +8,7 @@
 
 @use './components/darkmode-switch';
 @use './components/button__show-sidebar';
+@use './components/button--animated';
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@100;300;500;600;900&family=Source+Sans+Pro:wght@200;300;400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@100;300;600;900&family=Poppins:wght@100;200;300;500;600;700;800&family=Source+Sans+Pro:wght@200;300;400;600&display=swap');
@@ -46,6 +47,7 @@ body {
 	--color-secondary-light: #cfdaf1;
 	--color-dark: #3b3b3b;
 	--color-shadow: #ddd;
+	--color-shadow-light: #3131312c;
 
 	--color-section-bg: #eee;
 	--color-section-element: #f1f1f1;
@@ -73,6 +75,7 @@ body {
 	--color-dark: #1d1c21;
 	--color-purple: #6e60d8;
 	--color-shadow: #0c0c0c;
+	--color-shadow-light: rgba(255, 255, 255, 0.157);
 
 	--color-section-bg: #3e3c47;
 	--color-section-element: #605c6d;
