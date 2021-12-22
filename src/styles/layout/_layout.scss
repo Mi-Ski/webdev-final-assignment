@@ -1,7 +1,7 @@
 .grid-container {
 	display: grid;
 	grid-template-columns: 23rem 1fr;
-	grid-template-rows: max-content min-content repeat(2, 80vh);
+	grid-template-rows: max-content min-content min-content 80vh;
 
 	@media only screen and (max-width: 600px) {
 		grid-template-columns: 0 1fr;
@@ -35,18 +35,18 @@
 	grid-column: 2 / 3;
 }
 
-.map-container {
+.main {
 	grid-column: 2 / 3;
 	grid-row: 3 / 4;
+}
+
+.map-container {
+	grid-column: 2 / 3;
+	grid-row: 4 / 5;
 	min-height: 400px;
 	width: 100%;
 	justify-content: center;
 	position: relative;
-}
-
-.main {
-	grid-column: 2 / 3;
-	padding: 30rem 5rem;
 }
 
 .footer {

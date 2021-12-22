@@ -1,7 +1,7 @@
 .map-container {
 	position: relative;
-	border-top: 0.5rem solid var(--color-main-bg);
-	border-bottom: 0.5rem solid var(--color-main-bg);
+	border-top: 0.8rem solid var(--color-section-element);
+	border-bottom: 0.8rem solid var(--color-section-element);
 	background-color: #242424;
 
 	&__title {
@@ -22,7 +22,7 @@
 		text-transform: uppercase;
 		font-family: 'Poppins', sans-serif;
 		color: var(--font-main-color);
-		background-color: var(--color-main-bg);
+		background-color: var(--color-section-element);
 
 		text-align: center;
 		width: max-content;
