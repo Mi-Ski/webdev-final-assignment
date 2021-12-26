@@ -5,6 +5,7 @@
 @use './layout/details-container';
 @use './layout/map-container';
 @use './layout/main-container';
+@use './layout/footer-container';
 
 @use './components/darkmode-switch';
 @use './components/button__show-sidebar';
@@ -26,8 +27,8 @@
 }
 
 html {
-	overflow-x: hidden;
 	font-size: 62.5%;
+	overflow-x: hidden;
 	font-family: 'Montserrat', sans-serif;
 
 	@media only screen and (max-width: 600px) {
@@ -37,6 +38,7 @@ html {
 
 body {
 	background-color: var(--color-main-bg);
+	overflow-x: hidden;
 }
 
 // color theme
@@ -66,7 +68,7 @@ body {
 
 	--darkmode-switch-border: #293241;
 	--darkmode-switch-thumb: #f45b69;
-	--darkmode-switch-fontweight: 500;
+	--darkmode-switch-fontweight: 500;	
 }
 
 [data-theme='dark'] {
@@ -90,6 +92,10 @@ body {
 
 	--darkmode-switch-border: #f45b69;
 	--darkmode-switch-fontweight: 300;
+}
+
+[data-theme='dark'] .footer-cta::after, [data-theme='dark'] .footer-cta::before {
+	background-image: url('../images/logo-light.svg') !important;
 }
 
 // utility classes

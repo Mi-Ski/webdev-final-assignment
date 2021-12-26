@@ -8,6 +8,10 @@
 	background-color: var(--color-section-bg);
 	padding: 14rem 0 18rem 0;
 
+	@media only screen and (max-width: 1000px) {
+		padding: 14rem 0;	
+	}
+
 	&__heading {
 		color: var(--font-main-color);
 		font-size: 3.5rem;
@@ -28,6 +32,10 @@
 		flex-wrap: wrap;
 		gap: 3rem;
 		max-width: 80%;
+
+		@media only screen and (max-width: 1000px) {
+			gap: 5rem;	
+		}
 	}
 }
 
@@ -38,6 +46,10 @@
 	-moz-perspective: 150rem;
 	min-height: 40rem;
 	width: 35rem;
+
+	@media only screen and (max-width: 1150px) {
+		width: 52rem;
+	}
 
 	& .card {
 		position: absolute;
