@@ -33,7 +33,7 @@
 	// 	flex-direction: row;
 	// 	justify-content: center;
 	// 	z-index: 2000;
-	// 	width: 100vw;
+	// 	width: ;
 	// 	height: 100vh;
 	// }
 
@@ -45,6 +45,9 @@
 
 		height: 100vh;
 		position: fixed;
+		@media only screen and (max-width: 700px) {
+			gap: 0rem;
+		}
 	}
 
 	&__top {
@@ -67,6 +70,9 @@
 
 	&__bottom {
 		margin-bottom: 6rem;
+		@media only screen and (max-width: 700px) {
+			margin-bottom: 12rem;	
+		}
 	}
 
 	&__logo-box {
@@ -136,6 +142,10 @@
 			@media only screen and (max-width: 1000px) {
 			transform: scale(1.02);
 				box-shadow: -.5rem 0rem 1rem var(--color-shadow);
+			}
+
+			@media only screen and (max-width: 700px) {
+			box-shadow: 0rem 0rem 1.3rem var(--color-shadow);
 			}
 		}
 

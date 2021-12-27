@@ -9,7 +9,11 @@
 	padding: 14rem 0 18rem 0;
 
 	@media only screen and (max-width: 1000px) {
-		padding: 14rem 0;	
+		padding: 14rem 0;
+	}
+
+	@media only screen and (max-width: 700px) {
+		padding: 10rem 0;
 	}
 
 	&__heading {
@@ -22,6 +26,10 @@
 		text-shadow: 1px 1px 10px var(--color-shadow);
 		padding: 3rem;
 		text-align: center;
+
+		@media only screen and (max-width: 500px) {
+			width: 95%;
+		}
 	}
 
 	&__cards {
@@ -34,7 +42,7 @@
 		max-width: 80%;
 
 		@media only screen and (max-width: 1000px) {
-			gap: 5rem;	
+			gap: 5rem;
 		}
 	}
 }
@@ -49,6 +57,10 @@
 
 	@media only screen and (max-width: 1150px) {
 		width: 52rem;
+	}
+	@media only screen and (max-width: 700px) {
+		perspective: unset;
+		min-height: 35rem;
 	}
 
 	& .card {
@@ -95,8 +107,6 @@
 				width: 80%;
 				text-align: center;
 
-
-
 				& > * {
 					margin: 0 auto;
 					font-family: 'Poppins', sans-serif;
@@ -123,24 +133,34 @@
 			position: absolute;
 			transform: rotateY(180deg);
 			background-color: var(--color-main-bg);
+
+			@media only screen and (max-width: 700px) {
+				display: none;
+			}
 		}
 	}
 
 	&:hover {
 		& .card--front {
 			transform: rotateY(180deg);
+			@media only screen and (max-width: 700px) {
+				transform: rotateY(0);
+			}
 		}
 		& .card--back {
 			transform: rotateY(0);
+			@media only screen and (max-width: 700px) {
+				transform: rotateY(0);
+			}
 		}
 	}
 }
 
 @keyframes slide {
-  0% {
-    transform: translateX(0) skew(-25deg);
-  }
-  100% {
-    transform: translateX(700px) skew(-25deg);
-  }
+	0% {
+		transform: translateX(0) skew(-25deg);
+	}
+	100% {
+		transform: translateX(700px) skew(-25deg);
+	}
 }
