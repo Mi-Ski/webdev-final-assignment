@@ -1,4 +1,4 @@
-import * as L7 from '@antv/l7';
+// import * as L7 from '@antv/l7';
 import { MapServiceEvent } from '@antv/l7';
 
 const lightMap = 'mapbox://styles/michalskiba/ckxnqlo3ycd4j14pbznf9y047';
@@ -82,4 +82,5 @@ export default mapInit = (darkTheme) => {
 	console.log(':D');
 };
 
+mapInit(true);
 // mapScene.map.on('click', (e) => console.log(e));

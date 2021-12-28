@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 const loader = new THREE.TextureLoader();
-const particleTexture = loader.load('./particle.png');
+const particleTexture = loader.load('../particle.png');
 
 const canvas = document.querySelector('canvas.webgl');
 const particlesCount = 5000;
@@ -19,7 +19,6 @@ particlesGeometry.setAttribute(
 	new THREE.BufferAttribute(positionArray, 3)
 );
 
-// Materials
 const material = new THREE.PointsMaterial({
 	size: 0.004,
 	color: 0x888888,
@@ -32,12 +31,10 @@ const particleMaterial = new THREE.PointsMaterial({
 	color: 0x999999,
 });
 
-// Mesh
 const sphere = new THREE.Points(geometry, material);
 const particleMesh = new THREE.Points(particlesGeometry, particleMaterial);
 scene.add(sphere, particleMesh);
 
-// Lights
 const pointLight = new THREE.PointLight(0xffffff, 0.1);
 pointLight.position.x = 2;
 pointLight.position.y = 3;
@@ -50,23 +47,15 @@ const sizes = {
 };
 
 window.addEventListener('resize', () => {
-	// Update sizes
 	sizes.width = window.innerWidth;
 	sizes.height = window.innerHeight;
-
-	// Update camera
 	camera.aspect = sizes.width / sizes.height;
 	camera.updateProjectionMatrix();
 
-	// Update renderer
 	renderer.setSize(sizes.width, sizes.height);
 	renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 });
 
-/**
- * Camera
- */
-// Base camera
 const camera = new THREE.PerspectiveCamera(
 	75,
 	sizes.width / sizes.height,
@@ -78,22 +67,13 @@ camera.position.y = 0;
 camera.position.z = 2;
 scene.add(camera);
 
-// Controls
-// const controls = new OrbitControls(camera, canvas)
-// controls.enableDamping = true
 
-/**
- * Renderer
- */
 const renderer = new THREE.WebGLRenderer({
 	canvas: canvas,
 });
 renderer.setSize(sizes.width, sizes.height);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
-/**
- * Animate
- */
 let mouseX, mouseY;
 mouseX = mouseY = 1000;
 
@@ -117,15 +97,12 @@ const clock = new THREE.Clock();
 export default tick = () => {
 	const elapsedTime = clock.getElapsedTime();
 
-	// Update objects
 	sphere.rotation.y = 0.1 * elapsedTime;
 	particleMesh.rotation.x = -mouseY * (1 * 0.00008);
 	particleMesh.rotation.y = -mouseX * (1 * 0.00008);
 
-	// Render
 	renderer.render(scene, camera);
 
-	// Call tick again on the next frame
 	window.requestAnimationFrame(tick);
 };
 
